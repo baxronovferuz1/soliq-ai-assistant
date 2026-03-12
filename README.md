@@ -1,0 +1,1 @@
+# soliq-ai-assistant
