@@ -37,6 +37,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "bot",
+    "rag",
+    "ingestion",
+    "llm",
+    "vector_db",
+
+    "fastapi",
+    "uvicorn",
 ]
 
 MIDDLEWARE = [
