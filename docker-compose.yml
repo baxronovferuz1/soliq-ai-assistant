@@ -1,0 +1,18 @@
+services:
+  ingestion:
+    build: .
+    command: python ingestion/ingest.py
+    env_file: .env
+    volumes:
+      - ./data:/code/data
+      - vector_db_data:/code/vector_db/faiss_index
+
+  bot:
+    build: .
+    env_file: .env
+    volumes:
+      - vector_db_data:/code/vector_db/faiss_index
+    restart: unless-stopped
+    
+volumes:
+  vector_db_data:

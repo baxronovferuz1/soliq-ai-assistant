@@ -17,7 +17,7 @@ load_dotenv()
 
 bot = Bot(token=os.getenv("TELEGRAM_BOT_TOKEN"))
 dp = Dispatcher()
-rag = RAGPipeline()   # bir marta yuklanadi
+rag = RAGPipeline()   
 
 @dp.message(Command("start"))
 async def cmd_start(message: Message):
