@@ -15,5 +15,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+RUN python ingestion/ingest.py
 
 CMD ["python", "bot/telegram_bot.py"]
